@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+  <style>
+    .alert{
+      display: block;
+      padding: 20px;
+      border-left: 5px solid;
+    }
+    .alert-success{
+      background-color: #D5F5E3;
+      border-left-color: #2ECC71;
+      color: #2ECC71;
+    }
+    .alert-error {
+    background-color: #F2D7D5;
+    border-left-color: #C0392B;
+    color: #C0392B;
+  }
+  </style>
+  <title>Number Guesser</title>
+</head>
+<body>
+  <div class="container" id='game-type'>
+    <div id="game-types">
+      <h1>Number Guesser</h1>
+      <input type="submit" value='Easy' class="easy-btn">
+      <input type="submit" value='Medium' class="medium-btn">
+      <input type="submit" value='Hard' class="hard-btn">
+    </div>
+  </div>
+  <div class="container" id ='game-play'>
+    <h1>Number Guesser</h1>
+    <div id="game">
+      <p>Guess a number between <span class="min-num"></span> and <span class="max-num"></span></p>
+      <input type="number" id="guess-input" placeholder="Enter your guess...">
+      <input type="submit" value="Submit" id="guess-btn">
+      <p class="message"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
