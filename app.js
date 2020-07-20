@@ -69,7 +69,7 @@ function selectGameType(){
 
 // Set Correct Guess
 function setCorrectGuess(){
-  correctGuess = parseInt(JSON.stringify((Math.random())*max +min));
+  correctGuess =Math.floor(Math.random()*(max-min+1)+min);
   //console.log(correctGuess,"Here");
   
 }
@@ -98,7 +98,7 @@ submitBtn.addEventListener('click',function(e){
         // End Game red, true,'Play Again'
         endGame('green',true,'Play Again');
         // Clear the input
-        guessInput.value = '';
+        //guessInput.value = '';
       }
       else{
         triesLeft -=1;
@@ -112,11 +112,12 @@ submitBtn.addEventListener('click',function(e){
         }
         else{
             // show Losing Message
-          showMessage(`${guess} is the Wrong answer. You Lost !. Click on the Play Again button to restart Game`,'red');
+          showMessage(`${guess} is the Wrong answer. You Lost !. Correct guess is ${correctGuess}`,'red');
+          
           // End Game red, true,'Play Again'
           endGame('red',true,'Play Again');
           // Clear the input
-          guessInput.value = '';
+          //guessInput.value = '';
         }
       }
     }
